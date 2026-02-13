@@ -326,6 +326,6 @@ This project is created for educational purposes as part of a Microservices Arch
 
 ---
 
-**Author**: [Flaviu Vanca]  
+**Author**: [@thaparazite](https://github.com/thaparazite) - Flaviu Vanca  
 **Course**: Microservices Architecture  
 **Date**: February 2026
