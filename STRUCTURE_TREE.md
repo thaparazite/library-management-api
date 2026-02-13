@@ -96,7 +96,7 @@ library-management-api/
 
 | Layer | Files | Purpose |
 |-------|-------|---------|
-| **Controllers** | 2 | HTTP request handling |
+| **Controllers** | 3 | HTTP request handling |
 | **Services** | 4 | Business logic (2 interfaces + 2 implementations) |
 | **Repositories** | 2 | Data access |
 | **Models** | 2 | Database entities |
