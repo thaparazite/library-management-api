@@ -322,7 +322,7 @@ The API returns structured error responses:
 
 ## 📄 License
 
-This project is created for educational purposes as part of a Microservices Architecture assignment.
+This project is created for educational purposes as part of my Microservices Architecture assignment.
 
 ---
 
