@@ -326,6 +326,6 @@ This project is created for educational purposes as part of a Microservices Arch
 
 ---
 
-**Author**: [Your Name]  
+**Author**: [Flaviu Vanca]  
 **Course**: Microservices Architecture  
-**Date**: February 2024
+**Date**: February 2026
