@@ -36,8 +36,8 @@ This API provides a complete library management system with:
 ```
 
 ### Technology Stack
-- **Framework**: Spring Boot 3.2.2
-- **Language**: Java 17
+- **Framework**: Spring Boot 3.5.7
+- **Language**: Java 25
 - **Database**: H2 (in-memory)
 - **Build Tool**: Maven
 - **ORM**: Spring Data JPA / Hibernate
