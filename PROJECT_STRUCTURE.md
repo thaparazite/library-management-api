@@ -23,6 +23,7 @@ library-management-api/
 │   │   │               ├── LibraryManagementApplication.java
 │   │   │               │
 │   │   │               ├── controller/           # REST Controllers (API Layer)
+│   │   │               │   ├── WelcomeController.java
 │   │   │               │   ├── LibraryController.java
 │   │   │               │   └── BookController.java
 │   │   │               │

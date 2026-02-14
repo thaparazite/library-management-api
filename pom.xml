@@ -27,7 +27,6 @@
         <!-- Override vulnerable dependency versions -->
         <tomcat.version>11.0.15</tomcat.version>
         <logback.version>1.5.25</logback.version>
-        <jackson.version>2.20.0</jackson.version>
     </properties>
 
     <dependencies>

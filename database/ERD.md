@@ -3,17 +3,17 @@
 
 ```
 ┌─────────────────────────────────────────────────┐
-│                    LIBRARY                       │
-│                 (Parent Entity)                  │
+│                    LIBRARY                      │
+│                 (Parent Entity)                 │
 ├─────────────────────────────────────────────────┤
-│ PK  id                  BIGINT                   │
-│     name                VARCHAR(255)  NOT NULL   │
-│     address             VARCHAR(500)             │
-│     phone               VARCHAR(20)              │
-│     email               VARCHAR(255)             │
-│     established_date    DATE                     │
-│     created_at          TIMESTAMP                │
-│     updated_at          TIMESTAMP                │
+│ PK  id                  BIGINT                  │
+│     name                VARCHAR(255)  NOT NULL  │
+│     address             VARCHAR(500)            │
+│     phone               VARCHAR(20)             │
+│     email               VARCHAR(255)            │
+│     established_date    DATE                    │
+│     created_at          TIMESTAMP               │
+│     updated_at          TIMESTAMP               │
 └─────────────────────────────────────────────────┘
                         │
                         │ 1
@@ -23,20 +23,20 @@
                         │ *
                         ▼
 ┌─────────────────────────────────────────────────┐
-│                     BOOK                         │
-│                 (Child Entity)                   │
+│                     BOOK                        │
+│                 (Child Entity)                  │
 ├─────────────────────────────────────────────────┤
-│ PK  id                  BIGINT                   │
-│ UK  isbn                VARCHAR(13)   NOT NULL   │
-│     title               VARCHAR(255)  NOT NULL   │
-│     author              VARCHAR(255)  NOT NULL   │
-│     genre               VARCHAR(100)             │
-│     publication_date    DATE                     │
-│     acquisition_date    DATE                     │
-│     pages               INTEGER                  │
-│ FK  library_id          BIGINT        NOT NULL   │
-│     created_at          TIMESTAMP                │
-│     updated_at          TIMESTAMP                │
+│ PK  id                  BIGINT                  │
+│ UK  isbn                VARCHAR(13)   NOT NULL  │
+│     title               VARCHAR(255)  NOT NULL  │
+│     author              VARCHAR(255)  NOT NULL  │
+│     genre               VARCHAR(100)            │
+│     publication_date    DATE                    │
+│     acquisition_date    DATE                    │
+│     pages               INTEGER                 │
+│ FK  library_id          BIGINT        NOT NULL  │
+│     created_at          TIMESTAMP               │
+│     updated_at          TIMESTAMP               │
 └─────────────────────────────────────────────────┘
 
 
