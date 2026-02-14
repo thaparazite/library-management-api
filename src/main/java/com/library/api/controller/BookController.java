@@ -22,7 +22,7 @@ import java.time.LocalDate;
  * Handles HTTP requests for book operations
  */
 @RestController
-@RequestMapping("/api/books")
+@RequestMapping(path = "/api/books", produces = "application/json")
 @RequiredArgsConstructor
 @Slf4j
 public class BookController {

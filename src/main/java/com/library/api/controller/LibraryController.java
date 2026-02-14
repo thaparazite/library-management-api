@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
  * Handles HTTP requests for library operations
  */
 @RestController
-@RequestMapping("/api/libraries")
+@RequestMapping(path = "/api/libraries", produces = "application/json")
 @RequiredArgsConstructor
 @Slf4j
 public class LibraryController {
