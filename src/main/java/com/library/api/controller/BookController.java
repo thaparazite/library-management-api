@@ -107,40 +107,48 @@ public class BookController {
     /**
      * GET /api/books/by-publication-date
      * Get books by publication date range (paginated)
+     * If no dates provided, returns all books sorted by publication date
      */
     @GetMapping("/by-publication-date")
     public ResponseEntity<PageResponse<BookResponse>> getBooksByPublicationDateRange(
-            @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
-            @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate,
+            @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
+            @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "publicationDate,asc") String sort) {
-        
-        log.info("GET /api/books/by-publication-date - startDate: {}, endDate: {}", startDate, endDate);
-        
+
+        LocalDate effectiveStartDate = (startDate != null) ? startDate : LocalDate.of(1000, 1, 1);
+        LocalDate effectiveEndDate = (endDate != null) ? endDate : LocalDate.now();
+
+        log.info("GET /api/books/by-publication-date - startDate: {}, endDate: {}", effectiveStartDate, effectiveEndDate);
+
         Pageable pageable = PaginationUtils.createPageable(page, size, sort);
-        PageResponse<BookResponse> response = bookService.getBooksByPublicationDateRange(startDate, endDate, pageable);
-        
+        PageResponse<BookResponse> response = bookService.getBooksByPublicationDateRange(effectiveStartDate, effectiveEndDate, pageable);
+
         return ResponseEntity.ok(response);
     }
 
     /**
      * GET /api/books/by-acquisition-date
      * Get books by acquisition date range (paginated)
+     * If no dates provided, returns all books sorted by acquisition date
      */
     @GetMapping("/by-acquisition-date")
     public ResponseEntity<PageResponse<BookResponse>> getBooksByAcquisitionDateRange(
-            @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
-            @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate,
+            @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,
+            @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size,
             @RequestParam(defaultValue = "acquisitionDate,asc") String sort) {
-        
-        log.info("GET /api/books/by-acquisition-date - startDate: {}, endDate: {}", startDate, endDate);
-        
+
+        LocalDate effectiveStartDate = (startDate != null) ? startDate : LocalDate.of(1000, 1, 1);
+        LocalDate effectiveEndDate = (endDate != null) ? endDate : LocalDate.now();
+
+        log.info("GET /api/books/by-acquisition-date - startDate: {}, endDate: {}", effectiveStartDate, effectiveEndDate);
+
         Pageable pageable = PaginationUtils.createPageable(page, size, sort);
-        PageResponse<BookResponse> response = bookService.getBooksByAcquisitionDateRange(startDate, endDate, pageable);
-        
+        PageResponse<BookResponse> response = bookService.getBooksByAcquisitionDateRange(effectiveStartDate, effectiveEndDate, pageable);
+
         return ResponseEntity.ok(response);
     }
 
