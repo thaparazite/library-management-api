@@ -222,8 +222,8 @@ POST   /api/books                              - Create new book
 PUT    /api/books/{id}                         - Update book
 DELETE /api/books/{id}                         - Delete book
 
-GET    /api/books/by-publication-date          - Filter by publication date range
-GET    /api/books/by-acquisition-date          - Filter by acquisition date range
+GET    /api/books/by-publication-date          - Filter by publication date (dates optional)
+GET    /api/books/by-acquisition-date          - Filter by acquisition date (dates optional)
 ```
 
 ### Query Parameters

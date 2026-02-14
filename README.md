@@ -164,8 +164,8 @@ CREATE TABLE book (
 | POST | `/api/books` | Create new book |
 | PUT | `/api/books/{id}` | Update book |
 | DELETE | `/api/books/{id}` | Delete book |
-| GET | `/api/books/by-publication-date` | Filter by publication date range |
-| GET | `/api/books/by-acquisition-date` | Filter by acquisition date range |
+| GET | `/api/books/by-publication-date` | Filter by publication date (dates optional) |
+| GET | `/api/books/by-acquisition-date` | Filter by acquisition date (dates optional) |
 
 ### Query Parameters
 
@@ -183,6 +183,14 @@ GET /api/books?startDate=2000-01-01&endDate=2020-12-31
 ```
 GET /api/books?author=Harper Lee
 GET /api/books?genre=Fiction
+```
+
+**Date Range Endpoints** (startDate and endDate are optional):
+```
+GET /api/books/by-publication-date                              # All books
+GET /api/books/by-publication-date?startDate=2000-01-01         # After date
+GET /api/books/by-publication-date?endDate=1950-12-31           # Before date
+GET /api/books/by-acquisition-date?startDate=2020-01-01&endDate=2023-12-31
 ```
 
 ## 📝 Sample Requests
