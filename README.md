@@ -66,8 +66,6 @@ library-management-api/
 ├── database/
 │   ├── schema.sql            # Master schema
 │   └── ERD.md                # Entity Relationship Diagram
-├── docs/
-│   └── API_Documentation.md  # API endpoint guide
 └── pom.xml                   # Maven dependencies
 ```
 
@@ -140,6 +138,12 @@ CREATE TABLE book (
 
 ## 🔌 API Endpoints
 
+### Welcome Endpoint
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/` | API status and available endpoints |
+
 ### Library Endpoints
 
 | Method | Endpoint | Description |
@@ -160,6 +164,8 @@ CREATE TABLE book (
 | POST | `/api/books` | Create new book |
 | PUT | `/api/books/{id}` | Update book |
 | DELETE | `/api/books/{id}` | Delete book |
+| GET | `/api/books/by-publication-date` | Filter by publication date range |
+| GET | `/api/books/by-acquisition-date` | Filter by acquisition date range |
 
 ### Query Parameters
 
@@ -168,9 +174,15 @@ CREATE TABLE book (
 GET /api/books?page=0&size=10&sort=title,asc
 ```
 
-**Date Filtering**:
+**Date Filtering** (on main endpoint):
 ```
 GET /api/books?startDate=2000-01-01&endDate=2020-12-31
+```
+
+**Author/Genre Filtering**:
+```
+GET /api/books?author=Harper Lee
+GET /api/books?genre=Fiction
 ```
 
 ## 📝 Sample Requests
@@ -278,9 +290,9 @@ The API returns structured error responses:
 
 ## 📚 Additional Resources
 
-- **Full API Documentation**: See `docs/API_Documentation.md`
 - **Database ERD**: See `database/ERD.md`
 - **Project Structure**: See `PROJECT_STRUCTURE.md`
+- **File Tree**: See `STRUCTURE_TREE.md`
 
 ## 🔐 API Features Demonstrated
 

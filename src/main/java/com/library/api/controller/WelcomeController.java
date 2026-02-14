@@ -16,7 +16,7 @@ import java.util.Map;
  * Provides information about the API at the root endpoint
  */
 @RestController
-@RequestMapping("/")
+@RequestMapping(path = "/", produces = "application/json")
 @RequiredArgsConstructor
 public class WelcomeController {
 

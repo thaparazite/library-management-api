@@ -28,6 +28,7 @@ library-management-api/
 │   │   │               │   └── BookController.java
 │   │   │               │
 │   │   │               ├── service/              # Business Logic Layer
+│   │   │               │   ├── BaseService.java
 │   │   │               │   ├── LibraryService.java
 │   │   │               │   ├── LibraryServiceImpl.java
 │   │   │               │   ├── BookService.java
@@ -50,9 +51,9 @@ library-management-api/
 │   │   │               │   │
 │   │   │               │   └── response/
 │   │   │               │       ├── LibraryResponse.java
-│   │   │               │       ├── LibraryDetailResponse.java
 │   │   │               │       ├── BookResponse.java
-│   │   │               │       └── PageResponse.java
+│   │   │               │       ├── PageResponse.java
+│   │   │               │       └── ErrorResponse.java
 │   │   │               │
 │   │   │               ├── mapper/               # Entity ↔ DTO Mapping
 │   │   │               │   ├── LibraryMapper.java
@@ -60,19 +61,16 @@ library-management-api/
 │   │   │               │
 │   │   │               ├── exception/            # Custom Exceptions
 │   │   │               │   ├── ResourceNotFoundException.java
-│   │   │               │   ├── ValidationException.java
+│   │   │               │   ├── BadRequestException.java
 │   │   │               │   └── GlobalExceptionHandler.java
 │   │   │               │
-│   │   │               ├── config/               # Configuration Classes
-│   │   │               │   └── AppConfig.java
-│   │   │               │
 │   │   │               └── util/                 # Utility Classes
-│   │   │                   └── DateUtil.java
+│   │   │                   └── PaginationUtils.java
 │   │   │
 │   │   └── resources/
 │   │       ├── application.properties            # Configuration
-│   │       ├── application.yml                   # Alternative config
-│   │       └── schema.sql                        # Database schema
+│   │       ├── schema.sql                        # Database schema
+│   │       └── data.sql                          # Sample data
 │   │
 │   └── test/
 │       └── java/
@@ -85,14 +83,10 @@ library-management-api/
 │
 ├── database/
 │   ├── schema.sql                                # Database creation script
-│   └── ERD.png                                   # Entity Relationship Diagram
+│   └── ERD.md                                    # Entity Relationship Diagram
 │
 ├── postman/
 │   └── Library_API_Collection.json               # Postman collection for testing
-│
-├── docs/
-│   ├── API_Documentation.md                      # API endpoint documentation
-│   └── Report.docx                               # Assignment report
 │
 ├── pom.xml                                       # Maven dependencies
 ├── .gitignore
@@ -173,7 +167,7 @@ library-management-api/
   - Standardized error responses
 - **Files**:
   - `ResourceNotFoundException.java`: For 404 errors
-  - `ValidationException.java`: For 400 errors
+  - `BadRequestException.java`: For 400 errors
   - `GlobalExceptionHandler.java`: Central exception handling with @ControllerAdvice
 
 ---
@@ -222,14 +216,22 @@ GET    /api/libraries/{id}/books   - Get all books for a library (paginated)
 
 ### Book Endpoints
 ```
-GET    /api/books                  - Get all books (paginated, with date filtering)
-GET    /api/books/{id}             - Get book by ID
-POST   /api/books                  - Create new book
-PUT    /api/books/{id}             - Update book
-DELETE /api/books/{id}             - Delete book
+GET    /api/books                              - Get all books (paginated)
+GET    /api/books/{id}                         - Get book by ID
+POST   /api/books                              - Create new book
+PUT    /api/books/{id}                         - Update book
+DELETE /api/books/{id}                         - Delete book
 
-GET    /api/books?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd  - Filter by publication date
-GET    /api/books?sort=publicationDate,desc                 - Sort by date
+GET    /api/books/by-publication-date          - Filter by publication date range
+GET    /api/books/by-acquisition-date          - Filter by acquisition date range
+```
+
+### Query Parameters
+```
+Pagination:    ?page=0&size=10&sort=title,asc
+Date filter:   ?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd
+Author filter: ?author=AuthorName
+Genre filter:  ?genre=Fiction
 ```
 
 ---
@@ -314,18 +316,19 @@ CREATE TABLE book (
 
 ---
 
-## Next Steps
+## Implementation Status: Complete ✅
 
-1. **Create Maven `pom.xml`** with all dependencies
-2. **Create database schema** (schema.sql)
-3. **Implement entities** (Library, Book)
-4. **Create DTOs** (Request/Response objects)
-5. **Implement repositories** (JPA interfaces)
-6. **Implement services** (Business logic)
-7. **Implement controllers** (REST endpoints)
-8. **Implement exception handling**
-9. **Create mappers** (Entity ↔ DTO)
-10. **Test with Postman**
+All core components have been implemented:
+- ✅ Maven `pom.xml` with all dependencies
+- ✅ Database schema (schema.sql) and sample data (data.sql)
+- ✅ Entity models (Library, Book)
+- ✅ DTOs (Request/Response objects)
+- ✅ JPA Repositories
+- ✅ Service layer (Business logic)
+- ✅ REST Controllers with JSON content-type
+- ✅ Exception handling
+- ✅ Entity ↔ DTO Mappers
+- ✅ Postman collection for testing
 
 ---
 
