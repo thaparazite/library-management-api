@@ -1,6 +1,6 @@
 # Library Management REST API - Project Structure
 
-## Domain Model
+## 🎯 Domain Model
 
 **Library Management System** with one-to-many relationship:
 - **Library** (Parent Entity) <- One-to-Many -> **Book** (Child Entity)
@@ -10,7 +10,7 @@
 
 ---
 
-## Directory Structure
+## 📁 Directory Structure
 
 ```
 library-management-api/
@@ -91,7 +91,7 @@ library-management-api/
 
 ---
 
-## File Count Summary
+## 📊 File Count Summary
 
 | Layer | Files | Purpose |
 |-------|-------|---------|
@@ -108,7 +108,7 @@ library-management-api/
 
 ---
 
-## Layer Responsibilities
+## 🏗️ Layer Responsibilities
 
 ### 1. Controller Layer (`controller/`)
 - **Purpose**: Handle HTTP requests and responses
@@ -164,7 +164,7 @@ library-management-api/
 
 ---
 
-## Technology Stack
+## ⚙️ Technology Stack
 
 ### Framework & Core
 - **Spring Boot** 3.x
@@ -191,7 +191,7 @@ library-management-api/
 
 ---
 
-## API Endpoints
+## 🔌 API Endpoints
 
 ### Library Endpoints
 ```
@@ -226,7 +226,7 @@ Genre filter:  ?genre=Fiction
 
 ---
 
-## Database Schema
+## 🗄️ Database Schema
 
 ### Relationship
 - **One Library -> Many Books** (ON DELETE CASCADE)
@@ -261,7 +261,7 @@ Genre filter:  ?genre=Fiction
 
 ---
 
-## Quick Reference
+## 🚀 Quick Reference
 
 ### Key Files
 - **Entry Point**: `LibraryManagementApplication.java`
