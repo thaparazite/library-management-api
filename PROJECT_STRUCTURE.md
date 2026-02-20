@@ -79,8 +79,10 @@ library-management-api/
 |   └── test/java/com/library/api/           # Test classes
 |
 ├── docs/                                     # Documentation
-|   ├── architecture-diagram.drawio(.png)
-|   ├── erd-diagram.drawio(.png)
+|   ├── architecture-diagram.drawio
+|   ├── architecture-diagram.drawio.png
+|   ├── erd-diagram.drawio
+|   ├── erd-diagram.drawio.png
 |   └── LOMBOK_SETUP.md
 |
 └── postman/                                  # API Testing
