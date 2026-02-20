@@ -1,0 +1,105 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="Library Management ERD" id="library-erd">
+    <mxGraphModel dx="1213" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="library-header" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#4472C4;strokeColor=#2E5090;fontSize=14;fontColor=#FFFFFF;" value="LIBRARY" vertex="1">
+          <mxGeometry height="270" width="280" x="120" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="library-pk" parent="library-header" style="text;strokeColor=#B8860B;fillColor=#FFFACD;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontColor=#000000;" value="PK  id : BIGINT AUTO_INCREMENT" vertex="1">
+          <mxGeometry height="30" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="library-name" parent="library-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     name : VARCHAR(255) NOT NULL" vertex="1">
+          <mxGeometry height="30" width="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="library-address" parent="library-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     address : VARCHAR(500)" vertex="1">
+          <mxGeometry height="30" width="280" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="library-phone" parent="library-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     phone : VARCHAR(20)" vertex="1">
+          <mxGeometry height="30" width="280" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="library-email" parent="library-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     email : VARCHAR(255)" vertex="1">
+          <mxGeometry height="30" width="280" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="library-established" parent="library-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     established_date : DATE" vertex="1">
+          <mxGeometry height="30" width="280" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="library-created" parent="library-header" style="text;strokeColor=#CCCCCC;fillColor=#F0F0F0;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#555555;fontStyle=2;" value="     created_at : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="30" width="280" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="library-updated" parent="library-header" style="text;strokeColor=#CCCCCC;fillColor=#F0F0F0;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#555555;fontStyle=2;" value="     updated_at : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="30" width="280" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="book-header" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#538135;strokeColor=#375623;fontSize=14;fontColor=#FFFFFF;" value="BOOK" vertex="1">
+          <mxGeometry height="360" width="280" x="520" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="book-pk" parent="book-header" style="text;strokeColor=#B8860B;fillColor=#FFFACD;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontColor=#000000;" value="PK  id : BIGINT AUTO_INCREMENT" vertex="1">
+          <mxGeometry height="30" width="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="book-isbn" parent="book-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     isbn : VARCHAR(13) NOT NULL UNIQUE" vertex="1">
+          <mxGeometry height="30" width="280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="book-title" parent="book-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     title : VARCHAR(255) NOT NULL" vertex="1">
+          <mxGeometry height="30" width="280" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="book-author" parent="book-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     author : VARCHAR(255) NOT NULL" vertex="1">
+          <mxGeometry height="30" width="280" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="book-genre" parent="book-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     genre : VARCHAR(100)" vertex="1">
+          <mxGeometry height="30" width="280" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="book-pubdate" parent="book-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     publication_date : DATE" vertex="1">
+          <mxGeometry height="30" width="280" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="book-acqdate" parent="book-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     acquisition_date : DATE" vertex="1">
+          <mxGeometry height="30" width="280" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="book-pages" parent="book-header" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" value="     pages : INT" vertex="1">
+          <mxGeometry height="30" width="280" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="book-fk" parent="book-header" style="text;strokeColor=#C45911;fillColor=#FCE4D6;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontStyle=1;fontColor=#000000;" value="FK  library_id : BIGINT NOT NULL" vertex="1">
+          <mxGeometry height="30" width="280" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="book-created" parent="book-header" style="text;strokeColor=#CCCCCC;fillColor=#F0F0F0;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#555555;fontStyle=2;" value="     created_at : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="30" width="280" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="book-updated" parent="book-header" style="text;strokeColor=#CCCCCC;fillColor=#F0F0F0;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#555555;fontStyle=2;" value="     updated_at : DATETIME NOT NULL" vertex="1">
+          <mxGeometry height="30" width="280" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="relationship" edge="1" parent="1" source="library-pk" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#2D7600;endArrow=ERmany;endFill=0;startArrow=ERone;startFill=0;fillColor=#60a917;" target="book-fk" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="205" />
+              <mxPoint x="460" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-label" parent="1" style="text;html=1;strokeColor=#666666;fillColor=#FFFFFF;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=11;fontStyle=0;fontColor=#333333;" value="1 : *&#xa;One-to-Many&#xa;&#xa;A Library has&#xa;many Books" vertex="1">
+          <mxGeometry height="90" width="100" x="410" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Library Management System - Entity Relationship Diagram" vertex="1">
+          <mxGeometry height="40" width="680" x="120" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-box" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=25;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#404040;strokeColor=#333333;fontSize=12;fontColor=#FFFFFF;" value="Legend" vertex="1">
+          <mxGeometry height="130" width="220" x="120" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-pk" parent="legend-box" style="text;strokeColor=#B8860B;fillColor=#FFFACD;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#000000;fontStyle=1;" value="PK = Primary Key" vertex="1">
+          <mxGeometry height="25" width="220" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-fk" parent="legend-box" style="text;strokeColor=#C45911;fillColor=#FCE4D6;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#000000;fontStyle=1;" value="FK = Foreign Key" vertex="1">
+          <mxGeometry height="25" width="220" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-nn" parent="legend-box" style="text;strokeColor=#CCCCCC;fillColor=#FFFFFF;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#000000;" value="NOT NULL = Required field" vertex="1">
+          <mxGeometry height="25" width="220" y="75" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-audit" parent="legend-box" style="text;strokeColor=#CCCCCC;fillColor=#F0F0F0;align=left;verticalAlign=middle;spacingLeft=10;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;fontColor=#555555;fontStyle=2;" value="Italic Grey = Audit fields (auto)" vertex="1">
+          <mxGeometry height="30" width="220" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cascade-note" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFFFFF;strokeColor=#333333;fontSize=11;align=left;spacingLeft=10;fontColor=#333333;" value="Cascade Behavior:&#xa;&#xa;cascade = ALL&#xa;orphanRemoval = true&#xa;&#xa;Deleting a Library&#xa;deletes all its Books" vertex="1">
+          <mxGeometry height="110" width="160" x="580" y="520" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
