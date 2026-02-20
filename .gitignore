@@ -85,3 +85,4 @@ spring-boot-devtools.properties
 
 # Application logs
 logs/
+nul
